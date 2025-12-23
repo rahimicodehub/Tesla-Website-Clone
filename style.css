@@ -118,7 +118,7 @@ header .container .navbar .main_list {
 header .container .navbar .main_list .parent-dropdown {
   position: relative;
 }
-header .container .navbar .main_list  .parent-dropdown .top-menu {
+header .container .navbar .main_list .parent-dropdown .top-menu {
   font-size: 1.3rem;
   font-weight: var(--bold);
   text-decoration: none;
@@ -145,9 +145,9 @@ header .container .navbar .main_list .parent-dropdown .dropdown {
 header .container .navbar .main_list .parent-dropdown:hover .dropdown {
   display: block;
 }
-.dropdown .cars{
+.dropdown .cars {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -158,50 +158,50 @@ header .container .navbar .main_list .parent-dropdown:hover .dropdown {
   justify-content: center;
   flex-direction: column;
 }
-.dropdown .cars .box .pic:hover{
+.dropdown .cars .box .pic:hover {
   background-color: none;
 }
 .dropdown .cars .box img {
   width: 200px;
   cursor: pointer;
 }
-.dropdown .cars .box .buttons{
+.dropdown .cars .box .buttons {
   margin-top: 1rem;
   display: flex;
   gap: 1rem;
 }
-.dropdown .cars .box button{
+.dropdown .cars .box button {
   background-color: transparent;
   text-decoration: underline;
   font-size: var(--h3);
   color: var(--midddle-gray);
 }
-.dropdown .cars .box button:hover{
+.dropdown .cars .box button:hover {
   color: var(--dark-gray);
 }
-.dropdown hr{
+.dropdown hr {
   width: 92%;
   margin: auto;
   color: var(--gray);
   height: 1px;
 }
-.dropdown .drop-list ul{
+.dropdown .drop-list ul {
   display: flex;
   list-style: none;
   flex-direction: column;
 }
 
-.dropdown .drop-list{
+.dropdown .drop-list {
   padding: 2rem;
 }
-.dropdown .drop-list ul li{
-  padding: 1.5rem ;
+.dropdown .drop-list ul li {
+  padding: 1.5rem;
   border-radius: var(--rudius5);
 }
-.dropdown .drop-list ul li:hover{
+.dropdown .drop-list ul li:hover {
   background-color: var(--light-gray);
 }
-.dropdown .drop-list ul li a{
+.dropdown .drop-list ul li a {
   font-size: var(--h2);
   font-weight: var(--bold);
   color: var(--midddle-gray);
@@ -317,8 +317,8 @@ main .container .buttons button:first-child:hover {
 }
 .Cars-slider .slider {
   display: flex;
-  overflow-x: auto; /*ایجاد اسکرول در صورت جا نشدن محتوا در داخل جعبه والد */
-  scroll-snap-type: x mandatory; /*نمی گذارد که اسکرول وسط تو جعبه گیر کند و همیش و کمک میکند تا جعبه ها به صورت کامل دیده شود*/
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
   gap: 20px;
   padding: 10px;
   scroll-behavior: smooth;
@@ -330,11 +330,11 @@ main .container .buttons button:first-child:hover {
 }
 /*  Cars - Slider - Models -Boxes  */
 .slide {
-  flex: 0 0 90%; /* عرض هر اسلاید */
+  flex: 0 0 90%;
   height: 75vh;
   background: #ccc;
   border-radius: 10px;
-  scroll-snap-align: start; /*این عنصر باید نقطه توقف اسکرول باشد.*/
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -783,7 +783,6 @@ footer .container ul li a {
 
 /* BreakPoints */
 
-
 @media (min-width: 768px) {
   header {
     z-index: 1000;
@@ -794,16 +793,16 @@ footer .container ul li a {
     grid-row: 1/2;
     margin-top: 0;
   }
-  header .container .navbar .main_list .parent-dropdown .dropdown{
+  header .container .navbar .main_list .parent-dropdown .dropdown {
     width: 768px;
     left: -158px;
   }
-  .dropdown .cars{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  margin-bottom: 2rem;
-}
-  header .container .icons-left{
+  .dropdown .cars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2rem;
+  }
+  header .container .icons-left {
     grid-row: 1/2;
   }
   main .container {
@@ -853,15 +852,15 @@ footer .container ul li a {
   }
 }
 @media (min-width: 1024px) {
-    header .container .navbar .main_list .parent-dropdown .dropdown{
+  header .container .navbar .main_list .parent-dropdown .dropdown {
     width: 1024px;
     left: -280px;
   }
-  .dropdown .cars{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  margin-bottom: 2rem;
-}
+  .dropdown .cars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 2rem;
+  }
   .Small-Cars .container .box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -894,23 +893,23 @@ footer .container ul li a {
     margin-top: 3rem;
   }
 }
-@media (min-width: 1281px){
-    header .container .navbar .main_list .parent-dropdown .dropdown{
+@media (min-width: 1281px) {
+  header .container .navbar .main_list .parent-dropdown .dropdown {
     width: 1518px;
     left: -530px;
     padding: 4rem 0;
   }
-  header .container .navbar .main_list .parent-dropdown .dropdown ul{
+  header .container .navbar .main_list .parent-dropdown .dropdown ul {
     display: flex;
     justify-content: center;
     align-items: flex-start;
   }
-   header .container .navbar .main_list .parent-dropdown .dropdown .drop-list{
+  header .container .navbar .main_list .parent-dropdown .dropdown .drop-list {
     border-left: 1px var(--gray) solid;
     padding-left: 3rem;
     margin-left: 8rem;
-   }
-  .dropdown hr{
-  display: none;
-}
+  }
+  .dropdown hr {
+    display: none;
+  }
 }
