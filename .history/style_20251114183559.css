@@ -1,0 +1,48 @@
+:root{
+    --white-color:white;
+    --black-color:black;
+    --dark-gray:rgb(31, 31, 31);
+    --midddle-gray:rgb(95, 95, 95);
+    --gray:rgb(199, 199, 199);
+    --light-gray:rgb(232, 232, 232);
+    --blue:rgb(0, 106, 255);
+    --max-width:100%;
+   --base-size: 1.2rem;
+  --scale: 1.25;
+  --xl: calc(var(--h1) * var(--scale) * var(--scale));
+  --lg: calc(var(--h1) * var(--scale));
+  --h1: calc(var(--h2) * var(--scale));
+  --h2: calc(var(--h3) * var(--scale));
+  --h3: calc(var(--h4) * var(--scale));
+  --h4: calc(var(--h5) * var(--scale));
+  --h5: calc(var(--h6) * var(--scale));
+  --h6: calc(var(--base-size));
+  --small: calc(var(var(--base-size) / var(var(--scale))));
+  --radius: 5px;
+    --thick:100;
+    --light:300;
+    --normal:500;
+    --bold:700;
+    --bolder:900;
+}
+
+html{
+    font-size: 62.5%;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+body{
+    
+}
+img{
+    max-width: 100%;
+}
+a,ul,li{
+    text-decoration: none;
+    font-size: var(--h2);
+}

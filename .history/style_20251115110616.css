@@ -1,0 +1,83 @@
+html{
+    font-size: 62.5%;
+}
+:root{
+    --white-color:white;
+    --black-color:black;
+    --dark-gray:rgb(31, 31, 31);
+    --midddle-gray:rgb(95, 95, 95);
+    --gray:rgb(199, 199, 199);
+    --light-gray:rgb(232, 232, 232);
+    --blue:rgb(0, 106, 255);
+    --max-width:100%;
+    --thick:100;
+    --light:300;
+    --normal:500;
+    --bold:700;
+    --bolder:900;
+    --head1: calc(2rem + 2vw);
+    --head2: calc(1rem + 2vw);
+    --head3: calc(0.7rem + 2vw);
+    --text: calc(0.1rem + 1vw);
+    --transition: 0.3s ease-in-out;
+}
+h1{
+    font-size: var(--head1);
+}
+h2{
+    font-size: var(--head2);
+}
+h3{
+    font-size: var(--head3);
+}
+h4,p,button,input,ul,li,a{
+    text-decoration: none;
+    font-size: var(--text);
+    font-weight: var(--normal);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+body{
+    width: 100%;
+}
+/* Header */
+.main-page header{
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    padding: 3rem 6rem;
+}
+.main-page header .logo img{
+    height:20px ;
+}
+.main-page header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+.main-page header .icons ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
+    list-style: none;
+    color: var(--dark-gray);
+}
+.main-page header .nav ul li a{
+    color: var(--dark-gray);
+}
+.question,.user{
+    height: 2.2rem;
+}
+.world{
+    height: 1.8rem;
+}
+
+

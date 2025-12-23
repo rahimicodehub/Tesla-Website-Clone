@@ -1,0 +1,45 @@
+:root{
+    --white-color:white;
+    --black-color:black;
+    --dark-gray:rgb(31, 31, 31);
+    --midddle-gray:rgb(95, 95, 95);
+    --gray:rgb(199, 199, 199);
+    --light-gray:rgb(232, 232, 232);
+    --blue:rgb(0, 106, 255);
+    --max-width:100%;
+        font-size: 62%;
+    --head1: calc(2rem + 2vw);
+    --head2: calc(1rem + 2vw);
+    --head3: calc(0.7rem + 2vw);
+    --text: calc(1rem + 1vw);
+    --primarycolor: rgb(0, 128, 255);
+    --secondrycolor: white;
+    --transition: 0.3s ease-in-out;
+    overflow-x: hidden;;
+    --thick:100;
+    --light:300;
+    --normal:500;
+    --bold:700;
+    --bolder:900;
+}
+
+html{
+    font-size: 62.5%;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+body{
+    
+}
+img{
+    max-width: 100%;
+}
+a,ul,li{
+    text-decoration: none;
+    font-size: var(--h2);
+}

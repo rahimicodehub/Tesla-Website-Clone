@@ -1,0 +1,233 @@
+html {
+  font-size: 62.5%;
+}
+:root {
+  --white-color: white;
+  --black-color: black;
+  --dark-gray: rgb(31, 31, 31);
+  --midddle-gray: rgb(95, 95, 95);
+  --gray: rgb(199, 199, 199);
+  --light-gray: rgb(242, 242, 242);
+  --blue: rgb(0, 140, 255);
+  --dark-blue: rgb(0, 117, 226);
+  --thick: 100;
+  --light: 300;
+  --normal: 500;
+  --bold: 700;
+  --bolder: 900;
+  --rudius20: 20px;
+  --rudius10: 10px;
+  --rudius5: 5px;
+  --transition: 0.3s ease-in-out;
+  --h1: 2rem;
+  --h2: 1.7rem;
+  --h3: 1.4rem;
+  --h4: 1.1rem;
+  --h5: 0.8rem;
+  --h6: 0.5rem;
+  --text: 0.6rem;
+  --big-text: 4.5rem;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+  list-style-type: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+a,
+input,
+ul,
+li,
+button,
+p {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: var(--h4);
+}
+a,
+button {
+  cursor: pointer;
+}
+button {
+  outline: none;
+  border: none;
+}
+h1 {
+  font-size: var(--h1);
+}
+h2 {
+  font-size: var(--h2);
+}
+h3 {
+  font-size: var(--h3);
+}
+h4 {
+  font-size: var(--h4);
+}
+h5 {
+  font-size: var(--h5);
+}
+h6 {
+  font-size: var(--h6);
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: transparent;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 93%;
+  margin: 1.8rem auto;
+}
+/* Header - Logo */
+header .container .logo img {
+  height: 2rem;
+}
+
+/* Header - LeftIcons */
+header .container .icons-left ul li{
+    background-color: var(--white-color);
+    padding: 1rem;
+    border-radius: var(--rudius10);
+}
+header .container .icons-left ul li:hover {
+  background-color: var(--light-gray);
+  
+  
+}
+header .container .icons-left ul li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header .container .icons-left ul li a h3 {
+  font-weight: var(--normal);
+}
+header .container .icons-left .world img {
+  height: 2.2rem;
+}
+
+/* login form */
+
+form {
+  width: 93%;
+  margin: auto;
+}
+form .container {
+  width: 350px;
+  margin: auto;
+  /* transform: translateY(50%); */
+}
+form .container h1 {
+  font-size: 3.3rem;
+  margin-bottom: 3rem;
+}
+form .container label {
+  color: var(--midddle-gray);
+  font-size: var(--h3);
+  font-weight: var(--bold);
+}
+form .container button,
+form .container input {
+  width: 100%;
+  padding: 1.1rem;
+  border-radius: var(--rudius5);
+  border: none;
+  outline: none;
+  background-color: var(--light-gray);
+  margin-top: 1rem;
+  font-size: var(--h2);
+  font-weight: var(--bold);
+  cursor: pointer;
+}
+form .container button {
+  margin-top: 4rem;
+}
+form .container .first-btn {
+  background-color: var(--blue);
+  margin-bottom: 4rem;
+  color: var(--white-color);
+}
+form .container .first-btn:hover{
+    background-color: var(--dark-blue);
+}
+form .container .box {
+  text-align: center;
+}
+form .container .box a {
+  font-size: var(--h3);
+  color: var(--midddle-gray);
+  position: relative;
+}
+form .container  .box a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--midddle-gray);
+}
+form .container  .box p {
+  margin-top: 3.5rem;
+  position: relative;
+  font-size: var(--h3);
+  color: var(--midddle-gray);
+  top: 1rem;
+  background-color: var(--white-color);
+  display: inline-block;
+  padding: 0 1rem;
+}
+.last-btn {
+  color: var(--midddle-gray);
+}
+.last-btn:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+/* footer */
+footer {
+  width: 93%;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+footer .container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+footer .container ul {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style-type: none;
+}
+footer .container ul li a {
+  color: var(--midddle-gray);
+  font-size: 1.2rem;
+  font-weight: var(--bold);
+}
+footer .container .box{
+    display: flex;
+    gap: 2rem;
+}
+@media (min-width: 768px){
+     footer{
+        margin-top: 16rem;
+     }
+   footer .container ul{
+    display: flex;
+    flex-direction: row;
+   } 
+}

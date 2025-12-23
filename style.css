@@ -1,0 +1,916 @@
+html {
+  font-size: 62.5%;
+}
+:root {
+  --white-color: white;
+  --black-color: black;
+  --dark-gray: rgb(31, 31, 31);
+  --midddle-gray: rgb(95, 95, 95);
+  --gray: rgb(199, 199, 199);
+  --light-gray: rgb(242, 242, 242);
+  --blue: rgb(0, 140, 255);
+  --dark-blue: rgb(0, 117, 226);
+  --thick: 100;
+  --light: 300;
+  --normal: 500;
+  --bold: 700;
+  --bolder: 900;
+  --rudius20: 20px;
+  --rudius10: 10px;
+  --rudius5: 5px;
+  --transition: 0.3s ease-in-out;
+  --h1: 2rem;
+  --h2: 1.7rem;
+  --h3: 1.4rem;
+  --h4: 1.1rem;
+  --h5: 0.8rem;
+  --h6: 0.5rem;
+  --text: 0.6rem;
+  --big-text: 4.5rem;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+  list-style-type: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+a,
+input,
+ul,
+li,
+button,
+p {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: var(--h4);
+}
+a,
+button {
+  cursor: pointer;
+}
+button {
+  outline: none;
+  border: none;
+}
+h1 {
+  font-size: var(--h1);
+}
+h2 {
+  font-size: var(--h2);
+}
+h3 {
+  font-size: var(--h3);
+}
+h4 {
+  font-size: var(--h4);
+}
+h5 {
+  font-size: var(--h5);
+}
+h6 {
+  font-size: var(--h6);
+}
+
+/* Header */
+/* HEADER */
+header {
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: transparent;
+}
+
+header .container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 93%;
+  margin: auto;
+  place-items: center;
+  align-content: flex-start;
+}
+
+/* Logo */
+header .container .logo {
+  grid-column: 1/2;
+  align-self: flex-start;
+}
+header .container .logo img {
+  height: 2rem;
+}
+
+/* NAVBAR */
+header .container .navbar {
+  grid-column: 1/8;
+  grid-row: 2/3;
+  margin-top: 1rem;
+}
+
+header .container .navbar .main_list {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+header .container .navbar .main_list .parent-dropdown {
+  position: relative;
+}
+header .container .navbar .main_list  .parent-dropdown .top-menu {
+  font-size: 1.3rem;
+  font-weight: var(--bold);
+  text-decoration: none;
+  color: var(--dark-gray);
+  padding: 0.8rem 1.4rem;
+  background-color: var(--white-color);
+  border-radius: var(--rudius5);
+  position: relative;
+}
+header .container .navbar .main_list > .parent-dropdown .top-menu:hover {
+  background-color: var(--light-gray);
+}
+/* Dropdown */
+header .container .navbar .main_list .parent-dropdown .dropdown {
+  background-color: var(--white-color);
+  width: 480px;
+  min-width: 300px;
+  position: absolute;
+  left: -10px;
+  z-index: 10;
+  display: none;
+  top: 25px;
+}
+header .container .navbar .main_list .parent-dropdown:hover .dropdown {
+  display: block;
+}
+.dropdown .cars{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 2rem;
+  margin-bottom: 2rem;
+}
+.dropdown .cars .box {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.dropdown .cars .box .pic:hover{
+  background-color: none;
+}
+.dropdown .cars .box img {
+  width: 200px;
+  cursor: pointer;
+}
+.dropdown .cars .box .buttons{
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.dropdown .cars .box button{
+  background-color: transparent;
+  text-decoration: underline;
+  font-size: var(--h3);
+  color: var(--midddle-gray);
+}
+.dropdown .cars .box button:hover{
+  color: var(--dark-gray);
+}
+.dropdown hr{
+  width: 92%;
+  margin: auto;
+  color: var(--gray);
+  height: 1px;
+}
+.dropdown .drop-list ul{
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+}
+
+.dropdown .drop-list{
+  padding: 2rem;
+}
+.dropdown .drop-list ul li{
+  padding: 1.5rem ;
+  border-radius: var(--rudius5);
+}
+.dropdown .drop-list ul li:hover{
+  background-color: var(--light-gray);
+}
+.dropdown .drop-list ul li a{
+  font-size: var(--h2);
+  font-weight: var(--bold);
+  color: var(--midddle-gray);
+  padding: 1rem 0;
+}
+
+/* Icons */
+header .container .icons-left {
+  grid-column: 7/8;
+  grid-row: 1/2;
+}
+
+header .container .icons-left ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+header .container .icons-left ul li {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .container .icons-left ul li:hover {
+  background-color: var(--light-gray);
+  border-radius: var(--rudius10);
+}
+
+header .container .icons-left img {
+  height: 2.6rem;
+}
+
+header .container .icons-left .world img {
+  height: 2.2rem;
+}
+
+/* Main */
+
+main {
+  width: 100%;
+  height: 70vh;
+  background-image: url(pics/1/Homepage-Promo-Cybertruck-Desktop-US-v2.avif);
+  background-size: cover;
+  background-position: center;
+}
+main .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 5rem;
+  gap: 0.8rem;
+}
+
+/* Main - Contents */
+
+main .container h1 {
+  color: var(--white-color);
+  font-size: var(--big-text);
+}
+main .container a {
+  color: var(--light-gray);
+  font-size: var(--h1);
+  position: relative;
+}
+main .container a:hover {
+  color: var(--white-color);
+}
+main .container a::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: var(--light-gray);
+  bottom: 0;
+  left: 0;
+}
+main .container a:hover::after {
+  height: 2px;
+  background-color: var(--white-color);
+}
+main .container .buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+main .container .buttons button {
+  padding: 1.3rem 7rem;
+  border-radius: var(--rudius5);
+  font-weight: var(--bold);
+  font-size: var(--h3);
+}
+main .container .buttons button:hover {
+  background-color: var(--gray);
+}
+main .container .buttons button:first-child {
+  background-color: var(--blue);
+  color: var(--white-color);
+}
+main .container .buttons button:first-child:hover {
+  background-color: var(--dark-blue);
+}
+
+/* Cars - Slider - Models*/
+.Cars-slider {
+  width: 93%;
+  margin: 4rem auto;
+}
+.Cars-slider .slider {
+  display: flex;
+  overflow-x: auto; /*ایجاد اسکرول در صورت جا نشدن محتوا در داخل جعبه والد */
+  scroll-snap-type: x mandatory; /*نمی گذارد که اسکرول وسط تو جعبه گیر کند و همیش و کمک میکند تا جعبه ها به صورت کامل دیده شود*/
+  gap: 20px;
+  padding: 10px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  cursor: grab;
+}
+.Cars-slider .slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+/*  Cars - Slider - Models -Boxes  */
+.slide {
+  flex: 0 0 90%; /* عرض هر اسلاید */
+  height: 75vh;
+  background: #ccc;
+  border-radius: 10px;
+  scroll-snap-align: start; /*این عنصر باید نقطه توقف اسکرول باشد.*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem;
+  color: var(--white-color);
+}
+.slide1 {
+  background-image: url(pics/2/Homepage-Card-Model-3-Desktop-US-v2.avif);
+}
+.slide2 {
+  background-image: url(pics/2/Homepage-Card-Model-Y-Desktop-US-v2.avif);
+}
+.slide3 {
+  background-image: url(pics/2/Homepage-Card-Cybertruck-Desktop-US-v3.avif);
+}
+.slide4 {
+  background-image: url(pics/2/Homepage-Card-Model-X-New-Desktop-US-v4.avif);
+}
+.slide5 {
+  background-image: url(pics/2/Homepage-Card-Model-S-Desktop-US-v3.avif);
+}
+/*   Cars - Slider - Models - Contents*/
+.Cars-slider .slider .slide h1 {
+  color: var(--white-color);
+  font-size: var(--big-text);
+  cursor: auto;
+}
+.Cars-slider .slider .slide a {
+  color: var(--light-gray);
+  font-size: var(--h2);
+  position: relative;
+}
+.Cars-slider .slider .slide a:hover {
+  color: var(--white-color);
+}
+.Cars-slider .slider .slide a::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: var(--light-gray);
+  bottom: 0;
+  left: 0;
+}
+.Cars-slider .slider .slide a:hover::after {
+  height: 2px;
+  background-color: var(--white-color);
+}
+.Cars-slider .slider .slide .buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.Cars-slider .slider .slide .buttons button {
+  padding: 1.3rem 2rem;
+  border-radius: var(--rudius5);
+  font-weight: var(--bold);
+  font-size: var(--h3);
+}
+.Cars-slider .slider .slide .buttons button:hover {
+  background-color: var(--gray);
+}
+.Cars-slider .slider .slide .buttons button:first-child {
+  background-color: var(--blue);
+  color: var(--white-color);
+}
+.Cars-slider .slider .slide .buttons button:first-child:hover {
+  background-color: var(--dark-blue);
+}
+
+/* Small - Cars */
+.Small-Cars {
+  width: 93%;
+  margin: auto;
+}
+.Small-Cars .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.Small-Cars .container .box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: var(--rudius10);
+  overflow: hidden;
+  background-color: var(--light-gray);
+}
+.Small-Cars .container .box .imgBox {
+  height: 28vh;
+  background-image: url(pics/4/Homepage-Grid-American-Heroes-v2.avif);
+  background-size: cover;
+  background-position: center;
+}
+.Small-Cars .container .box1 .imgBox {
+  background-image: url(pics/4/Homepage-Grid-Current-Offers.avif);
+}
+.Small-Cars .container .box .content {
+  background-color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem;
+}
+.Small-Cars .container .box .content h1 {
+  font-size: 3rem;
+}
+.Small-Cars .container .box .content a {
+  color: var(--midddle-gray);
+  font-size: var(--h2);
+  margin: 1rem 0 1rem;
+}
+.Small-Cars .container .box .content button {
+  background-color: var(--white-color);
+  padding: 1.1rem 9rem;
+  border-radius: var(--rudius5);
+  color: var(--dark-gray);
+  font-size: var(--h3);
+  font-weight: var(--bold);
+  letter-spacing: 1px;
+}
+.Small-Cars .container .box .content button:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+/* Features */
+
+.features {
+  width: 93%;
+  margin: 2rem auto;
+}
+.features .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+
+.features .container .box {
+  background-image: url(pics/5/Homepage-Features-Desktop.avif);
+  width: 100%;
+  height: 70vh;
+  background-position: top;
+  background-size: 250%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 4rem;
+  border-radius: var(--rudius10);
+  overflow: hidden;
+}
+
+.features .container .box1 {
+  position: relative;
+  background-image: none;
+  overflow: hidden;
+}
+.features .container .box1 .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.features .container .box1 .texts {
+  position: relative;
+  z-index: 10;
+}
+.features .container .box .content h1 {
+  color: var(--white-color);
+  font-size: 4rem;
+}
+.features .container .box .content button {
+  padding: 1rem 4.7rem;
+  background-color: var(--white-color);
+  border-radius: var(--rudius5);
+  font-size: var(--h3);
+  margin-right: 1rem;
+  margin-top: 1rem;
+  font-weight: var(--bold);
+  transition: var(--transition);
+}
+.features .container .box .content .texts button:first-child {
+  background-color: var(--blue);
+  color: var(--white-color);
+}
+.features .container .box .content button:hover {
+  background-color: var(--gray);
+}
+.features .container .box .content .texts button:first-child:hover {
+  background-color: var(--dark-blue);
+}
+/* Map */
+.map {
+  width: 93%;
+  margin: 5rem auto;
+}
+.map .container .mapbox {
+  background-image: url(pics/7/map.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 60vh;
+  border-radius: var(--rudius10);
+  position: relative;
+  cursor: move;
+}
+.map .container .mapbox .buttons {
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+}
+.map .container .mapbox .buttons .left {
+  background-color: var(--light-gray);
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: var(--rudius5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 0 5px var(--gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map .container .mapbox .buttons .right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.map .container .mapbox .buttons .right .box {
+  padding: 0.5rem;
+  background-color: var(--white-color);
+  display: inline-block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px var(--gray);
+  margin: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  border: 2px solid var(--white-color);
+}
+.map .container .mapbox .buttons .right .box:hover {
+  border-color: var(--black-color);
+}
+.map .container .mapbox .buttons .right .box1 {
+  z-index: 10;
+}
+.map .container .mapbox .buttons .right:hover .box2 {
+  right: 50px;
+}
+.map .container .mapbox .buttons .right:hover .box3 {
+  right: 100px;
+}
+.map .container .mapbox .buttons .right:hover .box4 {
+  right: 50px;
+  bottom: 50px;
+}
+.map .container .mapbox .buttons .right:hover .box5 {
+  right: 50px;
+  bottom: 100px;
+}
+.map .container .mapbox .buttons .right:hover .box6 {
+  right: 100px;
+  bottom: 100px;
+}
+.map .container .mapbox .buttons .right:hover .box7 {
+  right: 150px;
+  bottom: 50px;
+}
+.map .container .mapbox .buttons .left button {
+  font-size: var(--h3);
+}
+/* bottom */
+.map .container .content {
+  margin-top: 3rem;
+}
+/* Left side */
+.map .container .content .left h1 {
+  font-size: var(--big-text);
+}
+.map .container .content .left p {
+  font-size: var(--h2);
+  color: var(--midddle-gray);
+}
+/* right side */
+.map .container .content .right {
+  margin: 3rem 0 2rem;
+}
+.map .container .content .right {
+  display: flex;
+  gap: 2rem;
+}
+.map .container .content .right .box .top {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.map .container .content .right .box .top h1 {
+  font-size: var(--big-text);
+}
+.map .container .content .right .box .top img {
+  width: 5cap;
+}
+.map .container .content .right .box p {
+  font-size: var(--h2);
+  color: var(--midddle-gray);
+}
+/* Buttons */
+.map .container .content .buttons {
+  display: flex;
+  gap: 1rem;
+}
+.map .container .content .buttons button {
+  background-color: var(--light-gray);
+  font-size: var(--h3);
+  font-weight: var(--bold);
+  padding: 1.2rem 5rem;
+  border-radius: var(--rudius5);
+  width: 200px;
+}
+.map .container .content .buttons button:hover {
+  background-color: var(--gray);
+}
+.map .container .content .buttons .black-btn {
+  background-color: rgb(17, 20, 44);
+  color: var(--white-color);
+}
+.map .container .content .buttons .black-btn:hover {
+  background-color: var(--midddle-gray);
+}
+
+/* Products - Backgrounds */
+.product1 {
+  background-image: url(pics/6/Homepage-Card-Solar-Panels-Desktop-v2.jpg);
+}
+.product2 {
+  background-image: url(pics/6/Homepage-Card-Powerwall-Desktop.avif);
+}
+.product3 {
+  background-image: url(pics/6/Homepage-Card-Megapack-Desktop-v2.avif);
+}
+.product4 {
+  background-image: url(pics/6/Homepage-Card-Solar-Roof-Desktop.avif);
+}
+.product-slides a {
+  color: var(--white-color);
+}
+.product1,
+.product2,
+.product3,
+.product4 {
+  display: flex;
+  justify-content: flex-end;
+}
+.Cars-slider .slider .slide .bottom p {
+  color: var(--white-color);
+  font-size: var(--h2);
+  cursor: auto;
+}
+
+/* Footer */
+
+footer {
+  width: 93%;
+  margin: 12rem auto 17rem;
+}
+footer .container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+footer .container ul {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style-type: none;
+}
+footer .container ul li a {
+  color: var(--midddle-gray);
+  font-size: 1.2rem;
+  font-weight: var(--bold);
+}
+
+/* Bottom Fixed Box */
+
+.bottom-box {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 0px 5px var(--gray);
+  background-color: var(--white-color);
+  z-index: 1000;
+}
+.bottom-box .container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+}
+.bottom-box .container .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-gray);
+  border-radius: var(--rudius5);
+  padding: 0.7rem 2rem;
+  gap: 1rem;
+  border: 1px solid var(--gray);
+}
+.bottom-box .container .box img {
+  height: 25px;
+}
+.bottom-box .container .box2 input {
+  min-width: 200px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: var(--h3);
+}
+.bottom-box .container .box1 button,
+.bottom-box .container .box2 {
+  font-size: var(--h3);
+  font-weight: var(--bold);
+}
+
+/* BreakPoints */
+
+
+@media (min-width: 768px) {
+  header {
+    z-index: 1000;
+    background-color: var(--white-color);
+  }
+  header .container .navbar {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    margin-top: 0;
+  }
+  header .container .navbar .main_list .parent-dropdown .dropdown{
+    width: 768px;
+    left: -158px;
+  }
+  .dropdown .cars{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-bottom: 2rem;
+}
+  header .container .icons-left{
+    grid-row: 1/2;
+  }
+  main .container {
+    padding-top: 14rem;
+  }
+  .slide {
+    flex: 0 0 70%;
+  }
+  .Small-Cars .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Small-Cars .container .box .imgBox {
+    display: none;
+  }
+  .features .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .features .container .box {
+    height: 85vh;
+    background-size: cover;
+  }
+  .features .container .box1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .features .container .box2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  footer {
+    width: 93%;
+    margin: 12rem auto 9rem;
+  }
+  footer .container ul {
+    flex-direction: row;
+  }
+  .bottom-box .container {
+    flex-direction: row;
+  }
+  .bottom-box .container .box1 {
+    order: 2;
+  }
+  .bottom-box .container .box2 input {
+    width: 300px;
+  }
+}
+@media (min-width: 1024px) {
+    header .container .navbar .main_list .parent-dropdown .dropdown{
+    width: 1024px;
+    left: -280px;
+  }
+  .dropdown .cars{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin-bottom: 2rem;
+}
+  .Small-Cars .container .box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Small-Cars .container .box .imgBox {
+    display: block;
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .Small-Cars .container .box .content {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    align-self: center;
+  }
+  main .container h1 {
+    font-size: 6rem;
+  }
+  .map .container .mapbox {
+    height: 80vh;
+  }
+  .map .container .content {
+    margin: auto 4rem;
+  }
+  .map .container .content .elements {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 1281px){
+    header .container .navbar .main_list .parent-dropdown .dropdown{
+    width: 1518px;
+    left: -530px;
+    padding: 4rem 0;
+  }
+  header .container .navbar .main_list .parent-dropdown .dropdown ul{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+   header .container .navbar .main_list .parent-dropdown .dropdown .drop-list{
+    border-left: 1px var(--gray) solid;
+    padding-left: 3rem;
+    margin-left: 8rem;
+   }
+  .dropdown hr{
+  display: none;
+}
+}
